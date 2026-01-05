@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome {{company}}</title>
+    <style>
+        /* Reset styles for email clients */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table { border-collapse: collapse !important; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f4f7f9; }
+
+        /* Main styles */
+        .wrapper { width: 100%; table-layout: fixed; background-color: #f4f7f9; padding-bottom: 40px; }
+        .main { background-color: #ffffff; margin: 0 auto; width: 100%; max-width: 600px; border-spacing: 0; color: #4a4a4a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .header { background-color: #0F1557; padding: 40px 20px; text-align: center; color: #ffffff; }
+        .content { padding: 40px 30px; line-height: 1.6; }
+        .footer { padding: 20px; text-align: center; font-size: 12px; color: #9b9b9b; }
+
+        /* Typography */
+        h1 { margin: 0; font-size: 24px; font-weight: bold; }
+        p { margin: 16px 0; font-size: 16px; color: #374151; }
+
+        /* Button */
+        .button-container { text-align: center; margin: 30px 0; }
+        .button { background-color: #2563eb; color: #ffffff !important; padding: 14px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block; font-size: 16px; transition: background-color 0.3s; }
+        
+        /* Utility */
+        .highlight { color: #0F1557; font-weight: 600; }
+        .divider { border-top: 1px solid #e5e7eb; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <center class="wrapper">
+        <table class="main" width="100%">
+            <!-- Header Section -->
+            <tr>
+                <td class="header">
+                    <h1>Welcome to <br />{{company}}</h1>
+                </td>
+            </tr>
+
+            <!-- Content Section -->
+            <tr>
+                <td class="content">                    
+                    <p>You have received an invitation to join the company. {{company}} by Kanoon ticket<span class="highlight"></span></p>
+                    
+                    <p>You have received an invitation to join. <strong>{{role}}</strong> </p>
+                    
+                    <!-- Call to Action -->
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td align="center" class="button-container">
+                                <a href="{{invite_url}}" class="button" target="_blank">Press confirm to join.</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="divider"></div>                    
+                    <p>See you!<br>Team {{company}}</p>
+                </td>
+            </tr>
+
+            <!-- Footer Section -->
+            <tr>
+                <td class="footer">
+                    <p>&copy; {{year}} {{company}}.<br /> All rights reserved.</p>
+                    <p>If you received this email by mistake, please disregard it.</p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

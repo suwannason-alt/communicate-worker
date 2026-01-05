@@ -18,7 +18,7 @@ import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
         return {
           exchanges: [
             {
-              name: 'communicate-exchange',
+              name: configService.get<string>('RABBITMQ_EXCHANGE') || '',
               type: 'topic',
             },
           ],
